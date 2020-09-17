@@ -1,12 +1,19 @@
 .box {
-  background: #f8f8f8;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
 }
+
+#top {
+  background-image: image-url("photo-edit3.jpg");
+  min-height: 100vh;
+}
+
 
 .header {
   display: flex;
   justify-content: space-between;
   font-size: 30px;
-  margin: 20px;
 }
 
 .photo-post{
@@ -14,10 +21,6 @@
   background-color: blue;
   color: white;
   text-align: center;
-}
-
-.photo-title {
- background-color: yellow;
 }
 
 .photo-login {
@@ -40,13 +43,20 @@
   text-decoration: none;
 }
 
-.box-one  {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.photo-top {
+  background-color:rgba(255, 255, 255, 0.8);
+  background-blend-mode:lighten;
+  height: 400px;
+  width: 100vw;
 }
-.box-text {
-  background-color: aqua;
-  height: 300px;
-  width: 300px;
+.photo-title {
+  background-color: yellow;
+  color: #364e96;
+  padding: 0.5em 0;
+  border-top: solid 5px #364e96;
+  border-bottom: solid 5px #364e96;
+  text-align: center;
+  background: linear-gradient(transparent 70%, #a7d6ff 70%);
+  font-size: 20px;
+  font-weight: bold;
 }
