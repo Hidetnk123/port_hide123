@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+<div class='box-new' >
+  <div class="contents-row">
+  <div class="container">
+    <h3>投稿する</h3>
+    <%= form_with(model: @product, local: true) do |form| %>
+      <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%#= f.file_field :image, id:'items_image' %>
+        <div id = "item-image"></div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>
