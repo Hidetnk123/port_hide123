@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Item.create(item_params)
+    @product = Product.create(product_params)
     if @product.valid?
       @item.save
       redirect_to root_path
@@ -22,6 +22,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:text, :image).merge(user_id: current_user.id)
+    params.require(:product).permit(:text, :image)
   end
 end

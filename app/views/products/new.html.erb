@@ -1,23 +1,39 @@
 <%= render "shared/header" %>
-<div class='box-new' >
-  <div class="contents-row">
-  <div class="container">
-    <h3>投稿する</h3>
-    <%= form_with(model: @product, local: true) do |form| %>
-      <div class="img-upload">
+
+<div class="items-sell-main">
+    <h2 class="items-sell-title">投稿</h2>
+    <%= form_with(model: @product, local: true) do |f| %>
+
+    <%# 画像 %>
+    <div class="img-upload">
       <div class="weight-bold-text">
-        出品画像
-        <span class="indispensable">必須</span>
+        image or video
       </div>
       <div class="click-upload">
         <p>
-          クリックしてファイルをアップロード
+          お気に入り画像選択
         </p>
-        <%#= f.file_field :image, id:'items_image' %>
+        <%= f.file_field :image, id:'items_image' %>
         <div id = "item-image"></div>
       </div>
     </div>
-    <% end %>
+    <%# /画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        
+        </div>
+        <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"text", rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "POST" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
   </div>
-</div>
-</div>
+  <% end %>
