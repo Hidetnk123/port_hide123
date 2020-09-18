@@ -22,3 +22,28 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# テーブル設計
+
+## users テーブル
+
+| Column              | Type    | Options     |
+| ------------------- | ------- | ----------- |
+| nickname            | string  | null: false |
+| email               | string  | null: false |
+| password            | string  | null: false |
+
+### Association
+
+- has_many :products
+
+## products テーブル
+
+| Column            | Type    | Options                        |
+| ----------------- | ------- | ------------------------------ |
+| text              | string  | null: false                    |
+| user_id           | integer | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
