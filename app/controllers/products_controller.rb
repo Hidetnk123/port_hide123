@@ -1,8 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
-    #@products = Product.includes(:user).order("created_at DESC")
+    @products = Product.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -12,7 +11,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.create(product_params)
     if @product.valid?
-      @item.save
+      @product.save
       redirect_to root_path
     else
       render :new
@@ -22,6 +21,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:text, :image)
+    params.require(:product).permit(:text, :image).merge(user_id: current_user.id)
   end
 end
