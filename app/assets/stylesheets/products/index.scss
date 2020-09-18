@@ -1,3 +1,15 @@
+.box-one {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ 
+ #top-one {
+   background-image: image-url("sky.jpg");
+   min-height: 100vh;
+ }
+
+ 
 .box {
  background-size: cover;
  background-repeat: no-repeat;
@@ -43,12 +55,24 @@
   text-decoration: none;
 }
 
+.photo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  background-color:rgba(255, 255, 255, 0.8);
+  background-blend-mode:lighten;
+  height: 400px;
+  width: 100vw;
+}
+
 .photo-top {
   background-color:rgba(255, 255, 255, 0.8);
   background-blend-mode:lighten;
   height: 400px;
   width: 100vw;
 }
+
 .photo-title {
   background-color: yellow;
   color: #364e96;
@@ -59,4 +83,12 @@
   background: linear-gradient(transparent 70%, #a7d6ff 70%);
   font-size: 20px;
   font-weight: bold;
+  background-color:rgba(255, 255, 255, 0.8);
+  background-blend-mode:lighten;
+  height: 400px;
+  width: 100vw;
+}
+
+.item-lists {
+  display: flex;
 }
