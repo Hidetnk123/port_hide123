@@ -1,26 +1,29 @@
-.box-one {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
- }
- 
- #top-one {
-   background-image: image-url("sky.jpg");
-   min-height: 100vh;
- }
 
  
+/* 一覧タイトル */
+.box-title{
+  height: 60px;
+  width: 100vw;
+  border-top: solid 5px #284dbd;
+  border-bottom: solid 5px ;
+}
+
+.photo-title {
+  color: #e7a01c;
+  padding: 0.5em 0;
+  text-align: center;
+  background: -webkit-repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  font-size: 20px;
+  font-weight: bold;
+  height: 400px;
+  width: 100vw;
+}
+/* //一覧タイトル */
+
 .box {
- background-size: cover;
- background-repeat: no-repeat;
- background-position: center;
+  background-color: yellow;
 }
-
-#top {
-  background-image: image-url("photo-edit3.jpg");
-  min-height: 100vh;
-}
-
 
 .header {
   display: flex;
@@ -67,22 +70,6 @@
 }
 
 .photo-top {
-  background-color:rgba(255, 255, 255, 0.8);
-  background-blend-mode:lighten;
-  height: 400px;
-  width: 100vw;
-}
-
-.photo-title {
-  background-color: yellow;
-  color: #364e96;
-  padding: 0.5em 0;
-  border-top: solid 5px #364e96;
-  border-bottom: solid 5px #364e96;
-  text-align: center;
-  background: linear-gradient(transparent 70%, #a7d6ff 70%);
-  font-size: 20px;
-  font-weight: bold;
   background-color:rgba(255, 255, 255, 0.8);
   background-blend-mode:lighten;
   height: 400px;

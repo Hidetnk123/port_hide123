@@ -1,11 +1,8 @@
 <header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <h2 class="search-form">Post</h2>
-    <%= link_to image_tag("photo-edit.jpg", class:"furima-icon"),  products_path %>
-  </div>
+    <%= link_to 'Post', products_path, class:"product-icon" %>
   <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to 'NewPost', new_product_path, class: "category-list" %></li>
+      <li><%= link_to 'New Post', new_product_path, class: "new-list" %></li>
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
