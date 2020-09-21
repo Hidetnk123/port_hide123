@@ -1,5 +1,3 @@
-
- 
 /* 一覧タイトル */
 .box-title{
   height: 60px;
@@ -10,11 +8,14 @@
 
 .photo-title {
   color: #e7a01c;
-  padding: 0.5em 0;
   text-align: center;
-  background: -webkit-repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
-  background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px,#e9f4ff 3px, #e9f4ff 7px);
-  font-size: 20px;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: #015dac;
+  background-image: radial-gradient(#0175d5 13%, transparent 13%), radial-gradient(#0175d5 13%, transparent 13%);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  font-size: 30px;
   font-weight: bold;
   height: 400px;
   width: 100vw;
