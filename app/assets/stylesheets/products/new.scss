@@ -1,5 +1,4 @@
-
-.items-sell-contents {
+.products-sell-contents {
   background-color: #f5f5f5;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
@@ -9,19 +8,19 @@
   min-width: 500px;
 }
 
-.items-sell-header {
+.products-sell-header {
   padding: 5vh 0;
   text-align: center;
 }
 
-.items-sell-main {
+.products-sell-main {
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
 }
 
-.items-sell-title {
+.products-sell-title {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -90,11 +89,11 @@
 /* /画像 */
 
 /* text */
-.new-items {
+.new-products {
   padding: 2vh 0;
 }
 
-.items-text {
+.products-text {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
@@ -103,11 +102,18 @@
   resize: none;
 }
 
-.items-explain {
+.products-explain {
   margin-top: 2vh;
 }
 
 /* /text */
+
+/* 下部ボタン */
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
 
 .sell-btn {
   background: #6dc4cf;
