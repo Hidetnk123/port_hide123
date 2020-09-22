@@ -1,7 +1,6 @@
 <div class="products-sell-contents">
   <header class="products-sell-header">
-    <%= link_to image_tag('photo-edit.jpg' , size: '185x50'), "/products" %>
-
+    <%= link_to 'POST', products_path, class:"second-logo"%>
   </header>
   <div class="products-sell-main">
       <h2 class="products-sell-title">POST</h2>
@@ -10,11 +9,11 @@
       <%# 画像 %>
       <div class="img-upload">
         <div class="weight-bold-text">
-          image or video
+          image
         </div>
         <div class="click-upload">
           <p>
-            画像&動画選択
+            画像選択
           </p>
           <%= f.file_field :image, id:'items_image' %>
           <div id = "item-image"></div>
@@ -32,7 +31,7 @@
       <%# 下部ボタン %>
       <div class="sell-btn-contents">
         <%= f.submit "POST" ,class:"sell-btn" %>
-        <%=link_to 'RETURN', root_path, class:"back-btn" %>
+        <%=link_to 'RETURN', products_path, class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
     <% end %>

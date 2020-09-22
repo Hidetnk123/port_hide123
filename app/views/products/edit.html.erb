@@ -1,0 +1,46 @@
+<%# cssは商品出品のものを併用しています。
+app/assets/stylesheets/products/new.css %>
+
+<div class="products-sell-contents">
+  <header class="products-sell-header">
+     <%= link_to 'POST', products_path, class:"second-logo"%>
+  </header>
+  <div class="products-sell-main">
+    <h2 class="products-sell-title">商品の情報を入力</h2>
+    <%= form_with(model: @product, local: true) do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%#= render 'shared/error_messages', model: f.object %>
+    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        image
+      </div>
+      <div class="click-upload">
+        <p>
+          画像選択
+        </p>
+        <%= f.file_field :image, id:'items_image' %>
+        <div id = "item-image"></div>
+      </div>
+    </div>
+    <%# /画像 %>
+    <%# 内容 %>
+      <div class="new-products">
+        <div class="products-explain">
+          <%= f.text_area :text, class:"products-text", id:"item-info", placeholder:"text", rows:"7" ,maxlength:"1000" %>
+        </div>
+      </div>
+      <%# /内容 %>
+
+      <%# 下部ボタン %>
+      <div class="sell-btn-contents">
+        <%= f.submit "POST" ,class:"sell-btn" %>
+        <%=link_to 'RETURN', product_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>

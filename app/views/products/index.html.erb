@@ -8,10 +8,11 @@
       <ul class='item-lists'>
         <% @products.each do |product| %>
             <li class='list'>
-              <%#= link_to item_path(item.id), method: :get do %>
+              <%= link_to product_path(product.id), method: :get do %>
               <div class='item-img-content'>
                 <%= image_tag product.image, class:"item-img" %>
               </div>
+            <% end %>
               <div class='item-info'>
                 <h3 class='item-name'>
                   <%= product.text %>
