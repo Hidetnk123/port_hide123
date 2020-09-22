@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :products
-  has_many :comments
-  
+  has_many :products, dependent: :destroy
+  has_many :comments, dependent: :destroy
+
   with_options presence: true do
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     number = /\A[a-zA-Z0-9]+\z/
