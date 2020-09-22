@@ -9,6 +9,12 @@
 }
 
 .second-logo {
-  width: 185px;
-  height: 49px;
-}
+  text-decoration: none;
+  line-height: 32px;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#209cff), to(#68e0cf));
+  background-image: -webkit-linear-gradient(left, #209cff 0%, #68e0cf 100%);
+  background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
+ }
