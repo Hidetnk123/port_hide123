@@ -1,7 +1,16 @@
 <%= render "shared/header" %>
 
-<%# 商品の概要 %>
+<%# 投稿の概要 %>
 <div class="item-show">
+  <%# 投稿者のみ削除可能%>
+    <div class="item-show-two">
+    <% if user_signed_in? && @product.user.id == current_user.id %>
+    <%= link_to '編集', edit_product_path(@product.id), method: :get, class: "item-red-btn" %>
+    <%= link_to '削除', product_path(@product.id), method: :delete, class:'item-destroy' %>
+    <% end %>
+    </div>
+    <%# // 投稿者のみ削除可能 %>
+
   <div class="item-box">
     <div class='item-img-contents'>
       <% @product.images.each do |image|%>
@@ -11,18 +20,8 @@
     <div class="item-explain-box">
       <span><%= @product.text %></span>
     </div>
-
-    <%# ログインしているユーザと出品しているユーザが同一人物である時、商品の編集と削除を表示にしましょう%>
-    <% if user_signed_in? && @product.user.id == current_user.id %>
-    <%= link_to '商品の編集', edit_product_path(@product.id), method: :get, class: "item-red-btn" %>
-    <p class='or-text'>or</p>
-    <%= link_to '削除', product_path(@product.id), method: :delete, class:'item-destroy' %>
-    <% end %>
-    
-    <%# // ログインしているユーザと出品しているユーザが同一人物である時、商品の編集と削除を表示にしましょう %>
-
   </div>
-  <%# /商品の概要 %>
+  <%# /投稿の概要 %>
 
   <div class="comment-box">
        <% if current_user %>
@@ -50,3 +49,5 @@
     </div>
   </div>
 </div>
+
+<%= render "shared/footer" %>
