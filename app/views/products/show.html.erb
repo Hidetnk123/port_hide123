@@ -44,6 +44,7 @@
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
           </p>
+          <p><%=link_to "削除", product_comment_path(comment.product.id, comment.id), method: :delete %></p>
         <% end %>
       <% end %>
     </div>
