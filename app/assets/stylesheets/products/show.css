@@ -25,9 +25,14 @@
   font-size: 25px;
 }
 
+.item-img-contents {
+  display: flex;
+}
+
 .item-box-img {
-  height: 50vh;
-  width: 60vw;
+  margin-left: 3px;
+  height: 40vh;
+  width: 40vw;
   min-height: 500px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;

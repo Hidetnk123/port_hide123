@@ -15,15 +15,18 @@
           <p>
             画像選択
           </p>
-          <%= f.file_field :image, id:'items_image' %>
+          <%= f.file_field :images, name: 'product[images][]', id:'items_image' %>
           <div id = "item-image"></div>
+          <% @product.images.each do |image| %>
+            <%= image_tag image, class: 'images' %>
+          <% end %>
         </div>
       </div>
       <%# /画像 %>
       <%# 内容 %>
       <div class="new-products">
         <div class="products-explain">
-          <%= f.text_area :text, class:"products-text", id:"item-info", placeholder:"text", rows:"7" ,maxlength:"1000" %>
+          <%= f.text_area :text, class:"products-text", id:"item-info", placeholder:"type a message", rows:"7" ,maxlength:"1000" %>
         </div>
       </div>
       <%# /内容 %>

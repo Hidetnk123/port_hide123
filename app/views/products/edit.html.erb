@@ -22,8 +22,11 @@ app/assets/stylesheets/products/new.css %>
         <p>
           画像選択
         </p>
-        <%= f.file_field :image, id:'items_image' %>
-        <div id = "item-image"></div>
+         <%= f.file_field :images, name: 'product[images][]', id:'items_image' %>
+         <div id = "item-image"></div>
+         <% @product.images.each do |image| %>
+           <%= image_tag image, class: 'images' %>
+         <% end %>
       </div>
     </div>
     <%# /画像 %>
