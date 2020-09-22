@@ -36,14 +36,30 @@ Things you may want to cover:
 ### Association
 
 - has_many :products
+- has_many :comments
 
 ## products テーブル
 
-| Column            | Type    | Options                        |
-| ----------------- | ------- | ------------------------------ |
-| text              | string  | null: false                    |
-| user_id           | integer | null: false, foreign_key: true |
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| text              | string     | null: false                    |
+| user_id           | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column            | Type       | Options                        |
+| ----------------- | ---------- | ------------------------------ |
+| text              | string     | null: false                    |
+| user_id           | references | null: false, foreign_key: true |
+| product_id        | references | null: false, foreign_key: true |
+
+
+### Association
+
+- belongs_to :user
+- belongs_to :product
