@@ -11,9 +11,6 @@
  }
  /* //背景TOPページ */
  
- .top-page-header {
-
- }
  
  .top-middle {
   margin-top: 10vh;
@@ -27,14 +24,28 @@
   align-items: center;
  }
 
- .image-one {
-  margin-top: 7vh;
+ .image-top {
+   display: flex;
  }
 
+ .image-one {
+  margin-top: 7vh;
+	overflow: hidden;
+}
+.image-one img {
+	display: block;
+	transition: 0.5s;
+}
+.image-one img:hover {
+	transform: scale(2.0, 2.0);
+}
+
  .nature-icon {
+  margin: 5px;
   width: 15vw;
   height: 15vw;
  }
+
 
  .top-title {
   font-size:5.5em;
