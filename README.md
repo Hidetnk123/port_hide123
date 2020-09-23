@@ -26,6 +26,13 @@ Things you may want to cover:
 
 * Application Name   
   Photo Post
+
+* Overview    
+  You can post, edit, delete, and browse photos
+
+* How to Use     
+  Only logged-in users can post, edit, and delete. If you are not logged in, you can only view
+
 # テーブル設計
 
 ## users テーブル
