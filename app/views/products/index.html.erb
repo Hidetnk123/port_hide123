@@ -17,7 +17,10 @@
                 <h3 class='item-name'>
                   <%= product.text %>
                 </h3>
-              </div>
+               </div>
+               <div class="tag-top">
+                <%= render 'products/tag_list', tag_list: product.tag_list%>
+               </div>
             </li>
         <% end %>
       </ul>
