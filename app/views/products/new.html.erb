@@ -31,7 +31,7 @@
         </div>
         <div class="form-group"> 
           <%= f.label :tag_list %>
-          <%= f.text_field :tag_list, value: @product.tag_list.join(','), class: "form-control"%>
+          <%= f.text_field :tag_list, value: @product.tag_list.join(','), class: "form-control", placeholder:"海,やま,sky"%>
         </div>
       </div>
       <%# /内容 %>
