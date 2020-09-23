@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.includes(:user).order("created_at DESC")
+    @tag_list = Tag.all 
   end
 
   def new
@@ -12,8 +13,10 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create(product_params)
+    # tag_list = params[:product][:name].split(nil)
     if @product.valid?
       @product.save
+      # @product.save_tag(tag_list)
       redirect_to products_path
     else
       render :new
@@ -21,6 +24,7 @@ class ProductsController < ApplicationController
   end
  
   def show
+    # @post_tags = @post.tags
     @comment = Comment.new
     @comments = @product.comments.includes(:user)
   end
@@ -47,6 +51,11 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:text, images:[]).merge(user_id: current_user.id)
+  end
+
+  # タグ用にストロングパラメータを設定して、文字列を受け取る
+  def tag_params
+    params.require(:tag).permit(:name)
   end
 
   def product_set
