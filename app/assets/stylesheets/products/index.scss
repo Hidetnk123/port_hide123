@@ -104,12 +104,15 @@
 
 .tag-top {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 10px;
 }
 
 .item-tag {
+  text-align: center;
   text-decoration: none;
-  margin-right: 3vw;
+  margin-right: 2vw;
   font-weight: bold;
   padding: 1px 3px;
   border-radius: 10px;

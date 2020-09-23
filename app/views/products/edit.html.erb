@@ -33,7 +33,12 @@ app/assets/stylesheets/products/new.css %>
     <%# 内容 %>
       <div class="new-products">
         <div class="products-explain">
+          <%= f.label :text %>
           <%= f.text_area :text, class:"products-text", id:"item-info", placeholder:"text", rows:"7" ,maxlength:"1000" %>
+        </div>
+        <div class="form-group"> 
+          <%= f.label :tag_list %>
+          <%= f.text_field :tag_list, value: @product.tag_list.join(','), class: "form-control"%>
         </div>
       </div>
       <%# /内容 %>
