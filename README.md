@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  -6.0.0
 
 * System dependencies
 
@@ -23,6 +24,8 @@ Things you may want to cover:
 
 * ...
 
+* Application Name 
+  Photo Post
 # テーブル設計
 
 ## users テーブル
