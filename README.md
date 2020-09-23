@@ -24,7 +24,7 @@ Things you may want to cover:
 
 * ...
 
-* Application Name 
+* Application Name   
   Photo Post
 # テーブル設計
 
