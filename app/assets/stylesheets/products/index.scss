@@ -1,29 +1,30 @@
 /* 一覧タイトル */
-.box-title{
-  height: 60px;
+.title-contents {
   width: 100vw;
-  border-top: solid 5px #284dbd;
-  border-bottom: solid 5px ;
+  height: 550px;
+  background-image: image-url('free1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.9);
 }
 
 .photo-title {
-  color: #e7a01c;
   text-align: center;
-  padding: 1rem 2rem;
-  color: #fff;
-  background: #015dac;
-  background-image: radial-gradient(#0175d5 13%, transparent 13%), radial-gradient(#0175d5 13%, transparent 13%);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
-  font-size: 30px;
+  font-size: 100px;
   font-weight: bold;
-  height: 400px;
   width: 100vw;
+  color: lightgreen;
+  
 }
 /* //一覧タイトル */
 
 .box {
-  background-color: yellow;
+  background-color: rgb(236, 236, 190);
 }
 
 .header {
