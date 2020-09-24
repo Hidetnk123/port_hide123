@@ -93,6 +93,7 @@
   padding: 2vh 0;
 }
 
+/* genre */
 .products-text {
   width: 100%;
   padding: 16px 16px 8px;
@@ -110,7 +111,22 @@
   width: 100%;
   padding: 16px 16px 8px;
 }
-/* /text */
+/* /genre */
+
+.products-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.products-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
 
 /* 下部ボタン */
 .sell-btn-contents {

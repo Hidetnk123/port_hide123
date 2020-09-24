@@ -34,11 +34,19 @@ app/assets/stylesheets/products/new.css %>
       <div class="new-products">
         <div class="products-explain">
           <%= f.label :text %>
-          <%= f.text_area :text, class:"products-text", id:"item-info", placeholder:"text", rows:"7" ,maxlength:"1000" %>
+          <%= f.text_area :text, class:"products-text", id:"item-info", placeholder:"type a message", rows:"7" ,maxlength:"1000" %>
         </div>
-        <div class="form-group"> 
+      <div class="products-detail">
+        <div class="weight-bold-text">Genre</div>
+        <div class="form">
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        </div>
+      </div>
+        <div class="products-detail"> 
+          <div class="weight-bold-text">
           <%= f.label :tag_list %>
-          <%= f.text_field :tag_list, value: @product.tag_list.join(','), class: "form-control"%>
+          </div>
+          <%= f.text_field :tag_list, value: @product.tag_list.join(','), class: "form-control", placeholder:"海,やま,sky"%>
         </div>
       </div>
       <%# /内容 %>
