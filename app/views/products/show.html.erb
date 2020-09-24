@@ -20,6 +20,10 @@
     <div class="item-explain-box">
       <span><%= @product.text %></span>
     </div>
+    <div class="genre-show">
+       <span class="tag_tag_list">Genre : </span>
+       <%= @product.genre.name %>
+    </div>
     <div class="tag-top-show">
        <span class="tag_tag_list">Tag list : </span>
       <%= render 'products/tag_list', tag_list: @product.tag_list%>

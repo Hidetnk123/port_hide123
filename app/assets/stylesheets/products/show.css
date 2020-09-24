@@ -26,14 +26,22 @@
 }
 
 .item-img-contents {
+  width: 100vw;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.item-box-img {
-  margin-left: 3px;
-  height: 40vh;
-  width: 40vw;
-  min-height: 500px;
+.item-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.item-img-contents>.item-box-img {
+  width: 37vw;
+  height: 37vh;
+  min-height: 300px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;
 }
@@ -92,6 +100,9 @@
   height: 15vh;
 }
 
+.genre-show {
+  margin-bottom: 2vh;
+}
 .tag_tag_list {
   font-size: large;
   margin-right: 10px;
