@@ -30,7 +30,13 @@
     </div>
   </div>
   <%# /投稿の概要 %>
-
+      <tr>
+        <% if current_user.liked_by?(@product.id) %>
+          <td>いいねを外す</td>
+        <% else %>
+          <td><%= link_to 'いいね', create_like_path(@product.id), method: :POST %></td>
+        <% end %>
+      </tr>
   <div class="comment-box">
        <% if current_user %>
         <%= form_with(model: [@product, @comment], local: true) do |form| %>
