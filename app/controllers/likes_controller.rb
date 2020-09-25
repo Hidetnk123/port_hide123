@@ -5,4 +5,9 @@ class LikesController < ApplicationController
     redirect_to product_path
   end
 
+  def destroy
+    Like.find_by(user_id: current_user.id, product_id: params[:id]).destroy
+    redirect_to  product_path
+  end
+
 end

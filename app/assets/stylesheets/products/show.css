@@ -34,6 +34,10 @@
   object-fit: contain;
 }
 
+.like-button {
+  margin-top: 30px;
+}
+
 
 .item-red-btn {
   background-color: rgb(43, 190, 87);
