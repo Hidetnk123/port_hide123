@@ -6,6 +6,11 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy
   has_many :comments
+  has_many :likes
+
+  def liked_by?(product_id)
+    likes.where(product_id: product_id).exists?
+  end
 
   with_options presence: true do
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
