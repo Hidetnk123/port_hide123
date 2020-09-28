@@ -63,6 +63,7 @@ gem 'pry-rails'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~> 6.0' 
 gem 'active_hash'
+gem 'font-awesome-sass'
 
 group :production do
   gem 'rails_12factor'
