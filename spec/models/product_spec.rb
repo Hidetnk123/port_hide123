@@ -8,7 +8,7 @@ RSpec.describe Product, type: :model do
   describe '投稿' do
     context '投稿がうまくいく時' do
       it '入力フォームに入力できていれば投稿できる' do
-      expect(@product).to be_valid
+        expect(@product).to be_valid
       end
 
       it 'タグが未入力でも投稿できる' do

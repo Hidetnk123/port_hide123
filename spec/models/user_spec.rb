@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   describe 'ユーザー新規登録' do
     context '新規登録がうまくいく時' do
       it '必須入力フォームが存在すれば登録できる' do
-      expect(@user).to be_valid
+        expect(@user).to be_valid
       end
     end
 
@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
       it 'emailが空だと登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email can't be blank", "Email is invalid")
+        expect(@user.errors.full_messages).to include("Email can't be blank", 'Email is invalid')
       end
       it 'emailは一意性であるので、重複したら登録できない' do
         @user.save

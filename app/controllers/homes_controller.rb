@@ -3,5 +3,4 @@ class HomesController < ApplicationController
 
   def front
   end
-  
 end

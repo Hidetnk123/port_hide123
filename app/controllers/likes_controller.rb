@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   before_action :product_set
-  
+
   def create
     Like.create(user_id: current_user.id, product_id: params[:id])
   end
@@ -14,5 +14,4 @@ class LikesController < ApplicationController
   def product_set
     @product = Product.find(params[:id])
   end
-
 end

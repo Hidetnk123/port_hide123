@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :product_set, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.includes(:user).order("created_at DESC")
+    @products = Product.includes(:user).order('created_at DESC')
   end
 
   def new
@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
       render :new
     end
   end
- 
+
   def show
     @comment = Comment.new
     @comments = @product.comments.includes(:user)
@@ -47,7 +47,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:text, :genre_id, :tag_list, { images:[] }).merge(user_id: current_user.id)
+    params.require(:product).permit(:text, :genre_id, :tag_list, { images: [] }).merge(user_id: current_user.id)
   end
 
   def product_set
