@@ -18,19 +18,11 @@
       <% end %>
     </div>
     <div class="like-button">
-      <tr>
-        <% if current_user.liked_by?(@product.id) %>
-          <td>
-            <%= link_to 'いいねを外す', destroy_like_path(@product.id), method: :DELETE%>
-            <%= @product.likes.count %>
-          </td>
-        <% else %>
-          <td>
-            <%= link_to 'いいね', create_like_path(@product.id), method: :POST %>
-            <%= @product.likes.count %>
-          </td>
-        <% end %>
+      <table>
+      <tr  id="product_<%= @product.id %>">
+         <%= render 'product', product: @product %>
       </tr>
+      </table>
     </div>
     <div class="item-explain-box">
       <span><%= @product.text %></span>
