@@ -10,6 +10,7 @@ require("channels")
 require("../image")
 require('./preview')
 require('jquery')
+require('slick.js')
 //require("rails-ujs")
 
 // Uncomment to copy all static images under ../images to the output folder and reference

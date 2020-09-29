@@ -12,10 +12,12 @@
     <%# // 投稿者のみ削除可能 %>
 
   <div class="item-box">
-    <div class='item-img-contents'>
-      <% @product.images.each do |image|%>
-        <%= image_tag image, class:"item-box-img" %>
-      <% end %>
+    <div class="previews">
+      <div class="slider">
+        <% @product.images.each do |image|%>
+          <%= image_tag image, class:"item-box-img" %>
+        <% end %>
+      </div>
     </div>
     <div class="like-button">
       <table>
