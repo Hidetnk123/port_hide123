@@ -26,7 +26,14 @@ Things you may want to cover:
 
 * Application Name   
   Photo Post  
-  URL:https://port-hide123.herokuapp.com/
+  URL:https://port-hide123.herokuapp.com/    
+  ID/Pass    
+  ID: knowledge  
+  Pass: 24680   
+  Test account  
+  Email address: testtest@test.com   
+  Password: test1234   
+   
 
 * Overview    
   You can post, edit, delete, and browse photos
