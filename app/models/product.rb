@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :user
   has_many_attached :images
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :likes
   acts_as_taggable
   extend ActiveHash::Associations::ActiveRecordExtensions

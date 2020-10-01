@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :products, dependent: :destroy
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :likes
 
   def liked_by?(product_id)
