@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+<div class="item-show">
+  <div class='photo-list'>
+    <div class="nickname-font">
+      <p class="nickname"><%= @nickname %>さんの投稿一覧</p>
+    </div>
+    <div>
+      <ul class='item-lists'>
+        <% @products.each do |product| %>
+            <li class='list'>
+              <%= link_to product_path(product.id), method: :get do %>
+              <div class='item-img-content'>
+                <%= image_tag product.images[0], class:"item-img" %>
+              </div>
+            <% end %>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= product.text %>
+                </h3>
+              </div>
+              <div class="tag-top">
+                <%= render 'products/tag_list', tag_list: product.tag_list%>
+              </div>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+</div>
+
+
+<%= render "shared/footer" %>
