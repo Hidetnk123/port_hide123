@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
   def destroy
     Comment.find_by(id: params[:id], product_id: params[:product_id]).destroy
-    redirect_to product_path
+    redirect_to products_path
   end
 
   private
