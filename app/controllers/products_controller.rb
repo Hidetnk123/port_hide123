@@ -21,9 +21,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    # @comment = Comment.new
-    # @comments = @product.comments.includes(:user)
-    @comments = Comment.all
+    @comment = Comment.new
+    @comments = @product.comments.includes(:user)
   end
 
   def edit
