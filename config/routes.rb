@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :products  do
     resources :comments, only: [:create, :destroy]
   end
-  resources :users, only: :show
+  resources :users, only: [:show, :edit, :update]
 
   post 'like/:id' => 'likes#create', as: 'create_like'
   delete 'like/:id' => 'likes#destroy', as: 'destroy_like'
