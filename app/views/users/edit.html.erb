@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<%= form_with model: current_user, class: 'edit-main', local: true do |f|%>
+<div class='edit-wrap'>
+   <div class='edit-header'>
+      <h2 class="edit-account">Edit Account</h2>
+    </div>
+ 
+    <div class="edit-form-group">
+      <div class='edit-form-text-wrap'>
+        <label class="edit-form-text">ニックネーム</label>
+      </div>
+      <%= f.text_area :nickname, class:"edit-input-default", id:"nickname", placeholder:"例) Minto", maxlength:"40" %>
+    </div>
+    <div class="edit-form-group">
+      <div class='edit-form-text-wrap'>
+        <label class="edit-form-text">メールアドレス</label>
+      </div>
+      <%= f.email_field :email, class:"edit-input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+    </div>
+    <div class='edit-register-btn'>
+      <%= f.submit "Update" ,class:"edit-register-update-btn" %>
+    </div>
+</div>
+<% end %>
+
+<%= render "shared/footer" %>
