@@ -28,8 +28,8 @@ Things you may want to cover:
   Photo Post  
   URL:https://port-hide123.herokuapp.com/    
   ID/Pass    
-  ID: knowledge  
-  Pass: 24680   
+  ID: photo  
+  Pass: 2222   
   Test account  
   Email address: testtest@test.com   
   Password: test1234   
